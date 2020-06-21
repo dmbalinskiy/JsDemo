@@ -1,0 +1,68 @@
+GENERIC WORKFLOW FOR MODERN JS APPROACH
+
+1. Install NodeJS in the system; NPM will be installed automatically
+
+2. Init folder as an npm root:
+    npm init
+    Result: package.json will be added in the folder
+
+3. Install Babel via npm repo:
+    npm install @babel/cli @babel-core --save-dev
+    Result: node_modules folder appears as well as package-lock.json file
+
+4. Setup source and production folders inside project:
+    ./  => dist     => assets       => bundle.js
+                    == index.html
+
+        => src      => index.js
+
+5. Setup appropriate script in "scripts" section of "package.json" file.
+    Use "--watch" flag for changes listening of the source file:
+    "scripts": {
+        "babel":  "node_modules/.bin/babel src/index.js --watch -o dist/assets/bundle.js"
+    },
+
+6. Run script once:
+    npm run babel
+    Then whenever file will be changes, these chages will lead to re-complilation in babel
+    ang update destination file in the "assets" folder
+
+
+WEBPACK FLOW
+
+1. Install webpack as node node_module
+    npm install webpack webpack-cli --save-dev
+
+2. Create webpack project file in the root directory
+    webpack.config.js 
+    specify "entry" and "output" variables
+
+3. Run "webpack" module w/o command line parameters
+    Use "--watch/-w" flag for continue listening after first-time startup
+    Use --mode production/build for mode setup
+    Don't forget to restart vs code for stopping babel watching
+    node_modules/.bin/webpack -w
+
+
+WEBPACK DEV SERVER
+
+1. Install dev server for webpack with specified version:
+    npm install webpack-dev-server
+
+2. Configure webpack.config.js file for adding server settings
+    Set-up "open" property for live displaying in browser console
+
+3. Add script in package.json scripts section for dev server startup
+    Use --mode production/build for mode setup
+    "serve": "webpack-dev-server --mode build"
+
+4. Run this command from the terminal console
+    Don't forget to stop LiveServer!
+
+
+WEBPACK & BABEL FLOW
+
+1. Install babel-loader from npm:
+    npm install babel-loader --save-dev
+
+2. Add 'module' section in webpack.config.js file

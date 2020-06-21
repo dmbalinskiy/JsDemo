@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI library</title>
+    <style>
+        body {font-size: 1.5em;}
+        .container{margin: 40px; margin-top: 60px;}
+        button {
+            width: 200px;
+            background: #eee;
+            padding: 10px;
+            margin: 20px auto;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!--Tooltip-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo velit consectetur
+            veritatis iure ab ipsum <span class="tooltip" data-message="I'm a tooltip!">
+                aliquam facilis</span>, exercitationem nisi molestias ea impedit
+                perspiciatis eos! In, sit! Perspiciatis, hic.
+        </p>
+
+        <!--Dropdown - 1 -->
+        <h2>Services</h2>
+        <div class="dropdown">
+            <div class="trigger">Awesome T-shirt Designs</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicint elit. Officiis
+                    possimus, a natus total sequi velit? Vel cupiditate hic incidunt quam
+                    laboriosam tenetur nam, voluptate, necessitatibus ex porro, soluta 
+                    accusantium aspernatur.
+                </p>
+            </div>
+        </div>
+
+        <!--Dropdown - 2 -->
+        <div class="dropdown">
+            <div class="trigger">Cool sticker Printing</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicint elit. Officiis
+                    possimus, a natus total sequi velit? Vel cupiditate hic incidunt quam
+                    laboriosam tenetur nam, voluptate, necessitatibus ex porro, soluta 
+                    accusantium aspernatur.
+                </p>
+            </div>
+        </div>
+        <h2>More information</h2>
+
+        <!--Tab content-->
+        <div class="tabs">
+            <ul>
+                <li class="trigger active" data-target="#about">About</li>
+                <li class="trigger" data-target="#delivery">Delivery</li>
+                <li class="trigger" data-target="#returns">Returns info</li>
+            </ul>
+            <div id="about" class="content active">
+                <h3>about</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicint elit. Officiis
+                    possimus, a natus total sequi velit? Vel cupiditate hic incidunt quam
+                    laboriosam tenetur nam, voluptate, necessitatibus ex porro, soluta 
+                    accusantium aspernatur.
+                </p>
+            </div>
+            <div id="delivery" class="content">
+                <h3>delivery</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicint elit. Officiis
+                    possimus, a natus total sequi velit? Vel cupiditate hic incidunt quam
+                    laboriosam tenetur nam, voluptate, necessitatibus ex porro, soluta 
+                    accusantium aspernatur.
+                </p>
+            </div>
+            <div id="returns" class="content">
+                <h3>returns info</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicint elit. Officiis
+                    possimus, a natus total sequi velit? Vel cupiditate hic incidunt quam
+                    laboriosam tenetur nam, voluptate, necessitatibus ex porro, soluta 
+                    accusantium aspernatur.
+                </p>
+            </div>
+        </div>
+
+        <!--Snackbars-->
+        <div>
+            <button>click me</button>
+        </div>
+
+    </div>
+    <script src="assets/bundle.js"></script>
+</body>
+</html>
